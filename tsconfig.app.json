@@ -3,7 +3,15 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [
+      "node",
+      "jasmine",
+      "protractor",
+      "gapi",
+      "gapi.youtube",
+      "gapi.auth2",
+      "youtube"
+    ]
   },
   "files": [
     "src/main.ts",
