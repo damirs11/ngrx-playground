@@ -1,0 +1,12 @@
+<nb-layout>
+  <nb-layout-column>
+
+    <app-login
+      (submitted)="onLogin($event)"
+      [pending]="pending$ | async"
+      [errorMessage]="error$ | async"
+    >
+    </app-login>
+
+  </nb-layout-column>
+</nb-layout>
