@@ -16,7 +16,6 @@ export class UserGuard implements CanActivate {
   canActivate(): Observable<boolean> {
     return this.store.select(fromUser.selectStatus).pipe(
       map((status) => {
-        console.log(status);
         if (!status.user && !status.isServiceLoaded) {
           this.store.dispatch(RouterActions.loginRedirect());
           return false;

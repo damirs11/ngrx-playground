@@ -18,26 +18,32 @@
   <form [formGroup]="authForm" (ngSubmit)="onLogin()">
 
     <div class="field">
-      <label>Логин</label>
+      <label>
+        <span>Логин</span>
+      </label>
       <input nbInput
             fullWidth
             formControlName="username"
-            autofocus>
+      >
     </div>
 
     <div class="field">
-      <label>Пароль</label>
+      <label>
+        <span>Пароль</span>
+      </label>
       <input nbInput
             fullWidth
             formControlName="password"
             type="password">
     </div>
 
-    <button nbButton
-            fullWidth
-            status="success"
-            [disabled]="!authForm.valid">
-      Sign In
-    </button>
+    <div class="button-collection">
+        <button nbButton
+                fullWidth
+                status="success"
+                [disabled]="!authForm.valid">
+          Войти
+        </button>
+    </div>
   </form>
 </div>
